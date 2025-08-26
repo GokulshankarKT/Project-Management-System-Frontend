@@ -1,0 +1,160 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Smooth transitions for all elements */
+* {
+  @apply transition-all ease-linear duration-300;
+  @apply scroll-smooth;
+}
+
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------- */
+/* Base default theme variables */
+@theme {
+  /* Colors */
+  --color-primary: #6366f1; /* Indigo */
+  --color-secondary: #8b5cf6; /* Violet */
+  --color-accent: #a78bfa; /* Soft purple accent */
+  --color-background: #f9fafb; /* Light grayish */
+  --color-surface: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-button-bg: var(--color-primary);
+  --color-button-text: #ffffff;
+  --color-border: #e5e7eb;
+  --landing-gradient: linear-gradient(135deg, #c4b5fd 0%, #818cf8 100%);
+  --spacing-card: 1.5rem;
+  --radius-card: 0.75rem;
+  --shadow-card: 0 6px 10px -1px rgb(0 0 0 / 0.1);
+}
+
+/* ------------------------- */
+/* Light Theme Override */
+[data-theme="light"] {
+  --color-primary: #4f46e5; /* Indigo stronger */
+  --color-secondary: #6366f1; /* Indigo lighter */
+  --color-accent: #818cf8; /* Soft highlight */
+  --color-background: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-button-bg: var(--color-primary);
+  --color-button-text: #ffffff;
+  --color-border: #d1d5db;
+  --landing-gradient: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  --shadow-card: 0 6px 12px -1px rgb(0 0 0 / 0.05);
+}
+
+/* ------------------------- */
+/* Dark Theme Override */
+[data-theme="dark"] {
+  --color-primary: #818cf8;
+  --color-secondary: #6366f1;
+  --color-accent: #f472b6; /* Pink accent for depth */
+  --color-background: #1e293b;
+  --color-surface: #111827;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-button-bg: var(--color-primary);
+  --color-button-text: #1f2937;
+  --color-border: #374151;
+  --landing-gradient: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  --shadow-card: 0 6px 12px -1px rgb(0 0 0 / 0.3);
+}
+
+/* ------------------------- */
+/* Light Violet Theme Override */
+[data-theme="violet"] {
+  --color-primary: #a78bfa; /* Violet main */
+  --color-secondary: #c4b5fd; /* Soft violet */
+  --color-accent: #fbcfe8; /* Pinkish accent */
+  --color-background: #f5f3ff;
+  --color-surface: #ede9fe;
+  --color-text-primary: #3f3f46;
+  --color-text-secondary: #6b7280;
+  --color-button-bg: var(--color-primary);
+  --color-button-text: #ffffff;
+  --color-border: #d8b4fe;
+  --landing-gradient: linear-gradient(135deg, #e0d7ff 0%, #c4b5fd 100%);
+  --shadow-card: 0 6px 12px -1px rgb(0 0 0 / 0.1);
+}
+
+/* ------------------------- */
+/* Tailwind Utility Classes */
+@layer utilities {
+  /* Backgrounds */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .bg-background {
+    background-color: var(--color-background);
+  }
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  .bg-button {
+    background-color: var(--color-button-bg);
+  }
+  .main-gradient {
+    background: var(--landing-gradient);
+  }
+
+  .main-gradient-bg {
+    background-color: var(--landing-gradient);
+  }
+
+  /* Text */
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  .text-button {
+    color: var(--color-button-text);
+  }
+
+  /* Borders */
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+  .border-default {
+    border-color: var(--color-border);
+  }
+
+  /* Cards / spacing / radius / shadow */
+  .p-card {
+    padding: var(--spacing-card);
+  }
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .h1-custom {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-primary;
+  }
+  .h4-custom {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold text-primary;
+  }
+  .p-custom {
+    @apply text-sm md:text-xl lg:text-lg text-secondary;
+  }
+}
