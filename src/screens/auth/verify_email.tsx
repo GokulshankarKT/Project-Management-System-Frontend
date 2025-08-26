@@ -1,5 +1,3 @@
-import React from "react";
-
 const verify_email = () => {
   return <div></div>;
 };

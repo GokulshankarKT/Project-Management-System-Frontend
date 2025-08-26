@@ -1,4 +1,3 @@
-import React from "react";
 import { Star, PercentSquare, GroupIcon } from "lucide-react";
 type RatingType = {
   node: React.ReactNode | string;

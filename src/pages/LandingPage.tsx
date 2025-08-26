@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const LandingPage = () => {
   const [theme, setTheme] = useState("default");
 
@@ -20,7 +22,7 @@ const LandingPage = () => {
             Tailwind CSS v4 Multi-Theme System
           </h1>
           <p className="text-(--color-text-muted) mb-6">
-            Select a theme to see the dynamic color changes using CSS custom
+            Select a {theme} to see the dynamic color changes using CSS custom
             properties.
           </p>
 

@@ -1,4 +1,3 @@
-import React from "react";
 
 const forgot_password = () => {
   return <div>Forgot Password</div>;

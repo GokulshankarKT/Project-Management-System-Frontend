@@ -1,4 +1,3 @@
-import React from "react";
 import { PiArrowRightLight } from "react-icons/pi";
 
 import box from "@/assets/box.png";

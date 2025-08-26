@@ -1,4 +1,3 @@
-import React from "react";
 import chart from "@/assets/landing_charts.jpg";
 import keyboard from "@/assets/landing_keyboard.jpg";
 
